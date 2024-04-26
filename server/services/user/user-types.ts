@@ -1,5 +1,10 @@
 export interface User {
+
+  /**
+   * The user identifier
+   */
   id: number;
+  
   /**
    * The user's name
    */
