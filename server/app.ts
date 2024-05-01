@@ -12,6 +12,7 @@ const port = 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+app.use(express.static(path.join(__dirname, "../client/public")));
 
 //Defines the API
 app.get("/", async (_:any, res: any) => {
