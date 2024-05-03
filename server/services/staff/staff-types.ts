@@ -1,10 +1,10 @@
-export interface User {
+export interface Staff {
 
   /**
    * The user identifier
    */
   id: number;
-  
+
   /**
    * The user's name
    */
@@ -14,7 +14,7 @@ export interface User {
    */
   email: string;
 
-  dateOfBirth: Date;
 
-  gender: string;
+
+  role: string;
 }
