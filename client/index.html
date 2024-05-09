@@ -6,15 +6,14 @@
     <script src="/services/staff-service.js"></script>
   </head>
   <body style="padding: 20px">
-    <h2>Welcome to Intern ICT Project</h2>
-    <h3>test</h3>
-    <hr />
-    <button onclick="fetchAllStaff()">fetch all staff</button>
-
     <h1>
       Staff Management<br />
-      <small id="staff-list-title"></small>
+      <button onclick="fetchAllStaff()">fetch all staff</button>
+      <small style="padding-left: 8px">
+        &nbsp;<span id="staff-list-title"></span>
+      </small>
     </h1>
+    <hr />
 
     <!-- CONTAINER -->
     <div class="staff-list-container">
