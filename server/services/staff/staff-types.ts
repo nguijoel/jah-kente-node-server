@@ -1,5 +1,4 @@
 export interface Staff {
-
   /**
    * The user identifier
    */
@@ -14,7 +13,16 @@ export interface Staff {
    */
   email: string;
 
-
-
+  /**
+   * The user's role
+   */
   role: string;
+
+  /**
+   * The user's avatar
+   */
+  photo?: string;
+
+
+  biography?: string;
 }

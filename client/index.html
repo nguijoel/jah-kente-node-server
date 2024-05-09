@@ -2,20 +2,48 @@
   <head>
     <meta charset="utf-8" />
     <title>Intern ICT Project</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src= "/services/staff-service.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/services/staff-service.js"></script>
   </head>
   <body style="padding: 20px">
     <h2>Welcome to Intern ICT Project</h2>
-    <h3>Design</h3>
-    <hr>
-    <img src="/assets/images/design.svg" alt="">
     <h3>test</h3>
-    <hr>
+    <hr />
     <button onclick="fetchAllStaff()">fetch all staff</button>
-    <div>
-      <h3 id="title"></h3>
-      <ul id="staff-list"></ul>
+
+    <h1>
+      Staff Management<br />
+      <small id="staff-list-title"></small>
+    </h1>
+
+    <!-- CONTAINER -->
+    <div class="staff-list-container">
+      <!-- LEFT-PANEL -->
+      <div class="staff-list-panel">
+        <ul id="staff-list-items"></ul>
+      </div>
+      <!-- / LEFT-PANEL -->
+
+      <!-- RIGHT-PANEL -->
+      <div class="staff-detail-panel">
+        <!-- PROFILE IMAGE -->
+        <img id="staff-detail-profile" />
+        <!-- / PROFILE IMAGE -->
+
+        <!-- DETAIL -->
+        <div class="staff-detail-panel-content">
+          <h3 id="staff-detail-title"></h3>
+          <div id="staff-detail-content"></div>
+        </div>
+        <!-- / DETAIL -->
+      </div>
+
+      <!-- / RIGHT-PANEL -->
     </div>
+    <!-- CONTAINER -->
+
+    <h3>Design</h3>
+    <hr />
+    <img src="/assets/images/design.svg" alt="" />
   </body>
 </html>
