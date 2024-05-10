@@ -1,4 +1,4 @@
-import { Staff } from "./staff-data";
+import { staffList } from "./staff-data";
 /**
  * Defines the Staff service
  */
@@ -6,9 +6,14 @@ const staffService = {
   /**
    * A method that returns a single user by id;
    */
-  getStaffById: (id: number) => Staff.find((e) => e.id === id),
+  getStaffById: (id: number) => staffList.find((e) => e.id === id),
 
-  allStaff: () => [...Staff],
+  allStaff: () =>
+    [...staffList].map((staff) => ({
+      id: staff.id,
+      name: staff.name,
+      email: staff.email,
+    })),
 };
 
 /**
