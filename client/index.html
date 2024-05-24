@@ -4,6 +4,7 @@
     <title>Intern ICT Project</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <script src="/services/staff-service.js"></script>
+    <script src="/services/user-service.js"></script>
   </head>
   <body style="padding: 20px">
     <h1>
@@ -33,6 +34,40 @@
         <div class="staff-detail-panel-content">
           <h3 id="staff-detail-title"></h3>
           <div id="staff-detail-content"></div>
+        </div>
+        <!-- / DETAIL -->
+      </div>
+
+      <!-- / RIGHT-PANEL -->
+    </div>
+    <!-- CONTAINER -->
+    
+    <hr />
+    <button onclick="fetchAllUsers()">fetch all users</button>
+    <small style="padding-left: 8px">
+      &nbsp;<span id="user-list-title"></span>
+    </small>
+
+    <ul id="user-list-items"></ul>
+
+    <!-- CONTAINER -->
+    <div class="user-list-container">
+      <!-- LEFT-PANEL -->
+      <div class="user-list-panel">
+        <ul id="user-list-items"></ul>
+      </div>
+      <!-- / LEFT-PANEL -->
+
+      <!-- RIGHT-PANEL -->
+      <div class="user-detail-panel">
+        <!-- PROFILE IMAGE -->
+        <img id="user-detail-profile" />
+        <!-- / PROFILE IMAGE -->
+
+        <!-- DETAIL -->
+        <div class="user-detail-panel-content">
+          <h3 id="user-detail-title"></h3>
+          <div id="user-detail-content"></div>
         </div>
         <!-- / DETAIL -->
       </div>
