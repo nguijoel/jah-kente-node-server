@@ -112,3 +112,8 @@ h1 small {
 #user-detail-content {
    flex-grow: 1;
 }
+
+.no-content {
+  font-style: italic;
+  color: #cccc;
+}

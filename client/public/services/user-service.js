@@ -23,7 +23,8 @@ function fetchAllUsers() {
 
         //Assign a function to the link that will be called when we click the link
         linkElement.onclick = () => {
-          // You might want to implement a function to fetch and display user details here, similar to `fetchStaffDetail`
+          // You might want to implement a function to fetch and display user
+          fetchUserDetail(user.id);
         };
 
         //Append the link to the list item
@@ -31,5 +32,25 @@ function fetchAllUsers() {
 
         userListElement.appendChild(listItemElement);
       });
+    });
+}
+
+function fetchUserDetail(id) {
+  fetch(`/users/${id}`)
+    .then((response) => response.json())
+    .then((data) => {
+      const titleElement = document.querySelector("#user-detail-title");
+      const profileElement = document.querySelector("#user-detail-profile");
+      const userDetailElement = document.querySelector("#user-detail-content");
+
+      profileElement.src = data.photo || "/assets/images/no-photo.png";
+      
+      titleElement.innerHTML = `
+      ${data.name}<br>
+       <small>${data.email}</small>
+      `;
+        userDetailElement.innerHTML = data.biography || "No biography";
+
+      if(!data.biography) userDetailElement.classList.add("no-content");
     });
 }
