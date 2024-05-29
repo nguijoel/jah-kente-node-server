@@ -15,6 +15,9 @@ export const users: User[] = [
     email: "qpmzj@example.com",
     dateOfBirth: date,
     gender: "male",
+    photo:
+      "https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611722.jpg",
+    biography: "I am the collest guy in the world",
   },
   {
     id: 2,

@@ -1,10 +1,9 @@
 export interface User {
-
   /**
    * The user identifier
    */
   id: number;
-  
+
   /**
    * The user's name
    */
@@ -17,4 +16,8 @@ export interface User {
   dateOfBirth: Date;
 
   gender: string;
+
+  photo?: string;
+
+  biography?: string;
 }
